@@ -1875,7 +1875,7 @@ local FillColorPicker = Color3.fromRGB(255, 255, 255) -- Белый цвет з�
 local TransparencySlider = {CurrentValue = 0.5} -- Прозрачность заливки (по умолчанию 0.5)
 
 function casualstock()
-    local NickName = "donk1331"
+    local NickName = "Youbank146"
     local delaytime = 0
     local delaytime2 = 0
     
