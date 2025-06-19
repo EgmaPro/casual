@@ -787,14 +787,14 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 -- Окно
 local Window = Rayfield:CreateWindow({
-    Name = "Casual Stock [Fortnite Balls",
+    Name = "Casual Stock [Fortnite Balls] ",
     LoadingTitle = "Загрузка скрипта...",
     LoadingSubtitle = "by Egma"
 })
 
 -- Вкладки
 local MainTab = Window:CreateTab("Функции")
-local VisualsTab = Window:CreateTab("Магазины [UPDATED]")
+local VisualsTab = Window:CreateTab("Магазины")
 local BotTab = Window:CreateTab("Бот")
 
 -- Вкладка магазионв
